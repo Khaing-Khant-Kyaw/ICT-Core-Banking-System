@@ -30,6 +30,7 @@ The following image represents the physical topology of the project, including n
 ## 2. Logical Network Topology
 The logical topology showcases how the devices communicate with each other across the network, including routing paths, VLANs, and IP planning.
 
+https://github.com/Khaing-Khant-Kyaw/ICT-Core-Banking-System/blob/main/Logical%20Topology.png
 
 ## 3. IP Planning
 Detailed IP configurations for each branch:
