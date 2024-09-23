@@ -26,16 +26,10 @@ The infrastructure spans across three branches with specific IP planning:
 
 The following image represents the physical topology of the project, including network devices, servers, and other essential infrastructure components.
 
-**Place the physical topology diagram here**
-
-![Physical Topology](path_to_physical_topology_image)
 
 ## 2. Logical Network Topology
 The logical topology showcases how the devices communicate with each other across the network, including routing paths, VLANs, and IP planning.
 
-Place the logical network topology diagram here
-
-![Logical Network Topology](path_to_logical_topology_image)
 
 ## 3. IP Planning
 Detailed IP configurations for each branch:
@@ -156,6 +150,9 @@ Backup: Regular backups are performed using Veritas to ensure that data can be r
 This project successfully implemented a multi-branch core banking infrastructure using cutting-edge virtualization, networking, and storage technologies. The deployment achieves high availability, load balancing, and reliable data backup, making it a robust solution for core banking operations.
 
 
+For more detailed information, refer to:
+- [ICT Core Banking Documentation (Word)](https://github.com/Khaing-Khant-Kyaw/ICT-Core-Banking-System/blob/main/ICT%20CORE%20BANKING%20DOCUMENT.docx)
+- [ICT Bank Project Information (Excel)](https://github.com/Khaing-Khant-Kyaw/ICT-Core-Banking-System/blob/main/ICT%20BANK%20PROJECT%20INFORMATION%20DOCUMENT.xlsx)
 
 
 
