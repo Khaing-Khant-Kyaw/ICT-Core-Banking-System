@@ -22,11 +22,12 @@ The infrastructure spans across three branches with specific IP planning:
 
 ## Project Contents
 
-### 1. Physical Topology
+## 1. Physical Topology
+
 The following image represents the physical topology of the project, including network devices, servers, and other essential infrastructure components.
 
 **Place the physical topology diagram here**
-```markdown
+
 ![Physical Topology](path_to_physical_topology_image)
 
 ## 2. Logical Network Topology
@@ -36,7 +37,7 @@ Place the logical network topology diagram here
 
 ![Logical Network Topology](path_to_logical_topology_image)
 
-3. IP Planning
+## 3. IP Planning
 Detailed IP configurations for each branch:
 
 Yangon Branch
@@ -64,7 +65,7 @@ interface Ethernet0/2
  switchport mode access
  duplex auto
 
-5. DHCP Configuration
+## 5. DHCP Configuration
 DHCP is configured to dynamically assign IP addresses to devices within each VLAN. Exclusions are set for reserved IPs, and DHCP options are configured to provide subnet, gateway, and DNS information.
 
 Example of DHCP Server Configuration:
@@ -75,7 +76,7 @@ interface Ethernet0/0
 Create DHCP pools for each VLAN.
 Configure DHCP options such as Option 1 (Subnet Mask), Option 2 (Default Gateway), and Option 6 (DNS Server).
 
-6. IGW (Internet Gateway) Configuration
+## 6. IGW (Internet Gateway) Configuration
 Each branch has an Internet Gateway (IGW) router, which handles NAT and allows devices to communicate with the internet. NAT rules are applied to map internal IP addresses to external ones.
 
 Example of IGW Configuration:
@@ -85,7 +86,7 @@ interface Ethernet0/1
  ip address 103.24.2.2 255.255.255.252
  ip nat outside
 
-7. OSPF Configuration
+## 7. OSPF Configuration
 OSPF (Open Shortest Path First) is configured on the routers to dynamically route traffic between branches and ISP routers. The configuration includes defining OSPF areas and assigning networks to these areas.
 
 Example of OSPF Configuration:
@@ -97,7 +98,7 @@ Verification of OSPF:
 
 do show run | sec ospf
 
-8. Virtual Machine Deployment
+## 8. Virtual Machine Deployment
 Four ESXi hosts are deployed and configured within each branch. After deployment, IP addresses and DNS are configured. Each ESXi host is assigned a static IP and added to vCenter for centralized management.
 
 Example of ESXi Host Configuration:
@@ -107,14 +108,15 @@ IP: 10.0.255.25/24
 DNS: 10.0.255.29
 Gateway: 10.0.255.254
 
-9. ISCSI Shared Storage Configuration
+## 9. ISCSI Shared Storage Configuration
 ISCSI shared storage is configured to allow multiple ESXi hosts to access a central datastore. The storage is set up for redundancy and high availability.
 
 Steps:
 Install iSCSI on the storage server.
 Add iSCSI targets to ESXi hosts using the vSphere Web Client.
 Rescan the storage devices to detect the shared storage.
-10. Load Balancer Configuration with KEMP
+
+## 10. Load Balancer Configuration with KEMP
 KEMP Load Balancer is deployed to distribute web traffic between the two ESXi hosts. The load balancer ensures that Web 1 and Web 2 servers are evenly balanced.
 
 Steps:
@@ -145,7 +147,8 @@ Results
 High Availability: In the event of an ESXi host failure, virtual machines are migrated to other hosts within minutes, ensuring continuous availability.
 Load Balancing: Traffic is distributed evenly between Web 1 and Web 2, ensuring optimal performance.
 Backup: Regular backups are performed using Veritas to ensure that data can be restored in the event of a disaster.
-Conclusion
+
+## Conclusion
 This project successfully implemented a multi-branch core banking infrastructure using cutting-edge virtualization, networking, and storage technologies. The deployment achieves high availability, load balancing, and reliable data backup, making it a robust solution for core banking operations.
 
 
