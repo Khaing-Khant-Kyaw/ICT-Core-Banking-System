@@ -49,7 +49,8 @@ Core Switch VLANs: 192.168.70.2/24, 10.1.10.1/24, etc.
 Nay Pyi Taw Branch
 ISP Router: 103.26.2.1/24
 Core Switch VLANs: 192.168.100.2/24, 10.2.10.1/24, etc.
-4. Configuration for Core and Access Switches
+
+## 4. Configuration for Core and Access Switches
 In each branch, VLANs are configured on the Core Switch (CSW) and Access Switches (ASW). VLANs are created for different departments, and EtherChannel is set up for redundancy between switches.
 
 Example of Core Switch (CSW) Configuration in Yangon:
@@ -123,20 +124,23 @@ Steps:
 Install KEMP Load Balancer on IP 10.0.255.31.
 Add real servers (ESXi hosts) with IPs 10.0.255.169 for load balancing.
 Bind the load balancer to the DNS server.
-11. Website Deployment
+
+## 11. Website Deployment
 Two web servers are deployed on ESXi hosts. Ubuntu Web Servers are installed, and Apache2 is configured to host websites.
 
 Steps:
 Install Ubuntu on ESXi-01 and ESXi-02.
 Install Apache2 on both servers.
 Configure websites and test access via the load balancer.
-12. High Availability (HA) Setup
+
+## 12. High Availability (HA) Setup
 vSphere High Availability (HA) and Distributed Resource Scheduler (DRS) are enabled to ensure that virtual machines are automatically restarted on another ESXi host in case of a failure.
 
 Steps:
 Enable vSphere HA in vCenter.
 Configure DRS to automatically balance resources between hosts.
-13. Backup Solution with Veritas
+
+## 13. Backup Solution with Veritas
 Veritas is used to perform regular backups of the vCenter and ESXi hosts. In case of system failure, Veritas ensures that data can be restored quickly with minimal downtime.
 
 Steps:
